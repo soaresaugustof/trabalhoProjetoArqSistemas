@@ -8,11 +8,36 @@ import java.util.List;
 public class Sale {
 
 	private Date dataVenda;
+	private Pagamento pagamento;
+	private Double valorPago = new Double(0); 
+	public Pagamento getPagamento() {
+		return pagamento;
+	}
+
+	public void setPagamento(Pagamento pagamento) {
+		this.pagamento = pagamento;
+	}
+
 	public Collection<SalesItens> itensDaVenda;
 	
 	public Sale() {
 		this.itensDaVenda = new ArrayList<SalesItens>();
 		this.dataVenda = dataVenda;
+	}
+	
+	public void efetuarPagamento(Pagamento pagamento) {
+		valorPago += pagamento.getValorPagamento();
+	}
+	
+	public void conferirPagamentoTotal() {
+		Double valorFaltante = getTotal();
+		
+		if (valorPago < valorFaltante) {
+			System.out.println("Foi pago um valor de " + valorPago + " reais em "+ pagamento.getFormaPagamento() +". Valor faltante: " + valorFaltante + " reais.");
+		} else {
+			System.out.println("Pagamento efetuado com sucesso em " + getDataVenda() + ".");
+		}
+
 	}
 	
 	public Double getTotal() {
@@ -23,7 +48,6 @@ public class Sale {
 			total += item.getSubTotal(item.getProduto());
 			
 		}
-		System.out.println("O total da venda foi de " + total + " reais no dia " + dataVenda);
 		return total;
 	}
 	
