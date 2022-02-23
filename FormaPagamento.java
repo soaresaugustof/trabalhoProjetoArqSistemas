@@ -2,8 +2,8 @@ package grasp;
 
 public enum FormaPagamento {
 	
-	DEBITO(1, "Cartão de Débito"), CREDITO(2, "Cartão de Crédito"), BOLETO(3, "Boleto bancário"),
-	PIX(4, "Transação PIX"), TED(5, "Transferência TED"), DOC(6, "Transferência DOC"), DINHEIRO(7, "Dinheiro");
+	DEBITO(1, "Cartï¿½o de Dï¿½bito"), CREDITO(2, "Cartï¿½o de Crï¿½dito"), BOLETO(3, "Boleto bancï¿½rio"),
+	PIX(4, "Transaï¿½ï¿½o PIX"), TED(5, "Transferï¿½ncia TED"), DOC(6, "Transferï¿½ncia DOC"), DINHEIRO(7, "Dinheiro"), FIADO(8, "Fiado");
 	
 
 	private Integer valor;
