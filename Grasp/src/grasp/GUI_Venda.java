@@ -1,7 +1,7 @@
 package grasp;
-import java.util.ArrayList;
+
 import java.util.Date;
-import java.util.List;
+
 
 public class GUI_Venda {
 
@@ -22,7 +22,11 @@ public class GUI_Venda {
 		
 		controle.adicionarPagamento(10.50, FormaPagamento.CREDITO.getDescricao());
 		controle.adicionarPagamento(2.0, FormaPagamento.DINHEIRO.getDescricao());
+		controle.adicionarPagamento(20.0, FormaPagamento.PIX.getDescricao());
+		controle.adicionarPagamento(14.5, FormaPagamento.DINHEIRO.getDescricao());
 	
 		controle.totalizarVenda();
+
+
 	}
 }

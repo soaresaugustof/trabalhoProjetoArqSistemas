@@ -3,13 +3,16 @@ package grasp;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
+
 
 public class Sale {
 
 	private Date dataVenda;
 	private Pagamento pagamento;
 	private Double valorPago = new Double(0); 
+	private String formaPag;
+	private Double valorParcial = new Double(0);
+	private Double valorTotal = new Double(0);
 	public Pagamento getPagamento() {
 		return pagamento;
 	}
@@ -26,15 +29,19 @@ public class Sale {
 	}
 	
 	public void efetuarPagamento(Pagamento pagamento) {
-		valorPago += pagamento.getValorPagamento();
+		formaPag = pagamento.getFormaPagamento();
+		valorParcial += pagamento.getValorPagamento();
+		valorPago = pagamento.getValorPagamento();
+		System.out.println("Pagamento de "+ valorPago + "reais, em " + formaPag );
 	}
 	
 	public void conferirPagamentoTotal() {
 		Double valorFaltante = getTotal();
 		
-		if (valorPago < valorFaltante) {
-			System.out.println("Foi pago um valor de " + valorPago + " reais em "+ pagamento.getFormaPagamento() +". Valor faltante: " + valorFaltante + " reais.");
+		if (valorParcial < valorFaltante) {
+			System.out.println("Foi pago um valor de " + valorParcial + " reais. Valor faltante: " + valorFaltante + " reais.");
 		} else {
+			System.out.println("Foi pago um valor de " + valorParcial + " reais. Valor faltante: " + valorFaltante + " reais.");
 			System.out.println("Pagamento efetuado com sucesso em " + getDataVenda() + ".");
 		}
 
