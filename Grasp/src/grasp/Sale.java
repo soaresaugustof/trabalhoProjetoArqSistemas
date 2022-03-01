@@ -39,9 +39,9 @@ public class Sale {
 		Double valorFaltante = getTotal();
 		
 		if (valorParcial < valorFaltante) {
-			System.out.println("Foi pago um valor de " + valorParcial + " reais. Valor faltante: " + valorFaltante + " reais.");
+			valorTotal = valorFaltante - valorParcial;
+			System.out.println("Foi pago um valor de " + valorParcial + " reais. Valor faltante: " + valorTotal + " reais.");
 		} else {
-			System.out.println("Foi pago um valor de " + valorParcial + " reais. Valor faltante: " + valorFaltante + " reais.");
 			System.out.println("Pagamento efetuado com sucesso em " + getDataVenda() + ".");
 		}
 
