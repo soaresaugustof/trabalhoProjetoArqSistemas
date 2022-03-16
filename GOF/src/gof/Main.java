@@ -6,7 +6,7 @@ public class Main {
         Controle controle = Controle.getInstancia();
 
         controle.ligar();
-        controle.UsarControle();
+        controle.usarControle();
         controle.desligar();
         controle.desligar();
     }
