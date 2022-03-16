@@ -33,7 +33,7 @@ public class Controle {
         }
     }
 
-    public void UsarControle() {
+    public void usarControle() {
         using = true;
         System.out.println("Usando televisão.");
         using = false;
