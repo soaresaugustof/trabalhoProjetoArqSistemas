@@ -5,12 +5,22 @@ public class ListTeste {
     public static void main(String[] args) {
         
         //Primeiro criamos todos os objetos do List
-		ListComponents globo = new List ("PANCAKE HOUSE List", "Breakfast");
-		ListComponents sbt = new List ("DINER List", "Lunch");
-		ListComponents sportv = new List ("CAF� List", "Lunch");
-		ListComponents espn = new List ("DESSERT List", "Lunch");
+		ListComponent sbt = new List ("SBT", "Sistema Brasileiro de Televisão", "5");
+		ListComponent globo = new List ("Globo", "Rede Globo de Comunicações", "10");
+		ListComponent sportv = new List ("SporTV", "SporTV, o canal campeão", "39");
+		ListComponent espn = new List ("ESPN", "Entertainment ans Sports Programming Network", "55");
 		
-		ListComponents totalCanais = new List ("ALL ListS", "ALL ListS COMBINED");
+		ListComponent totalCanais = new List ("ALL ListS", "ALL ListS COMBINED", "ALL Numbers");
+
+		totalCanais.adicionar(sbt);
+		totalCanais.adicionar(globo);
+		totalCanais.adicionar(sportv);
+		totalCanais.adicionar(espn);
+
+		espn.adicionar(new ListItem("Premier League", "Jogo do Campeonato Inglês", "11:30"));
+
+		Channels channels = new Channels(totalCanais);
+		channels.printList();
 
     }
     

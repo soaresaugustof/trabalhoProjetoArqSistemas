@@ -1,9 +1,9 @@
 package composite;
 
 public class Channels {
-    ListComponents totalCanais;
+    ListComponent totalCanais;
 
-    public Channels(ListComponents totalCanais) {
+    public Channels(ListComponent totalCanais) {
         this.totalCanais = totalCanais;
     }
 

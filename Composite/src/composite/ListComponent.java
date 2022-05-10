@@ -21,7 +21,7 @@ public abstract class ListComponent {
 		throw new UnsupportedOperationException();
 	}
 
-    public double getNumeroCanal() {
+    public String getNumeroCanal() {
 		throw new UnsupportedOperationException();
 	}
 
