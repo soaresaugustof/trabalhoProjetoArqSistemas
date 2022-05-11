@@ -1,5 +1,9 @@
 {
     "java.project.sourcePaths": [
-        "Observer\\src"
+        "Aspect\\src",
+        "Composite\\src",
+        "Observer\\src",
+        "Grasp\\src",
+        "GOF\\src"
     ]
 }
