@@ -23,10 +23,11 @@ public class List extends ListComponent {
     public void remover(ListComponent listComponent) {
         listComponents.remove(listComponent);
 	}
+
 	public ListComponent pegarFilho(int i) {
         return (ListComponent) listComponents.get(i);
 	}
-    
+
     public void print() {
         System.out.println("\n" + getNome() + " ," + getDescricao());
         System.out.println("------------------------------------");
@@ -35,8 +36,6 @@ public class List extends ListComponent {
             ListComponent listComponents = (ListComponent) iterator.next();
             listComponents.print();
         }  
-        
-        
     }
     
     public String getNome() {
